@@ -70,3 +70,27 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function showGryffindorMembers(hogwarts) {
+  const gryffindorMembers = hogwarts.filter(
+    (person) => person.house === "Gryffindor"
+  );
+  gryffindorMembers.forEach(person => {
+    console.log(`${person.firstName} ${person.lastName}`);
+  });
+}
+showGryffindorMembers (hogwarts); 
+
+function showTeachersHavingPets (hogwarts) {
+  const teachers = hogwarts.filter(
+    (person) => person.occupation === "Teacher"
+  );
+  
+ const teachersHavingPets = teachers.filter(
+  (teacher) => teacher.pet !== null
+  );
+  teachersHavingPets.forEach((teacher) => {
+    console.log(`${teacher.firstName} ${teacher.lastName}`);
+  }) 
+}
+showTeachersHavingPets (hogwarts);
